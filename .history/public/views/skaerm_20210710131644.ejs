@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../skaerm.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <link rel="stylesheet" href="../../widgetinst.css">
+    <script src="https://kit.fontawesome.com/6dfa6f1a44.js" crossorigin="anonymous"></script>
+    <title>MoltrupAdmin | Redigér <%=skærm%></title>
+ 
+
+
+
+    <script type="application/javascript">
+
+
+    
+      let widgetDatastr = '<%-JSON.stringify(widgets) %>';
+      let widgetData = JSON.parse(widgetDatastr);
+      let skabelonDatastr = '<%-JSON.stringify(skabelon) %>';
+      let skabelonData = JSON.parse(skabelonDatastr);
+      const skærm  = '<%-skærm %>';
+      const brugte = JSON.parse('<%- JSON.stringify(brugte) %>');
+      </script>
+
+
+
+</head>
+<body onload="hjemKnap(this)">
+
+
+  <header >
+ 
+    <section class="skærmHeader">
+      <h1><%=skærm%></h1>
+    </section>
+   
+  </header>
+    <main id="main">
+
+
+    </main>
+
+
+
+    <footer>
+
+      Master indstillinger for skærmen..
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-functions.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+    <script src="https://mikzel.dk/MoltrupAdmin/SRC/SCRIPTS/popup.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="../../SRC/jquery-ui.min.js"></script>
+
+    <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+    <script src="../../widgetinst.js"></script>
+    <script src="../../widgetMenu.js"></script>
+    <script src="../../widgets.js"></script>
+    <script src="../../skabelonRender.js"></script>
+    <script src="../../skaerm.js"></script>
+    <script src="../../widgetRender.js"></script>
+    <script src="public/gemÆndringerAdvarsel.js"></script>
+
+  <script type="text/javascript">
+    // GetGridElementsPosition($('main').index(), $('main')); 
+  </script>
+
+</body>
+</html>

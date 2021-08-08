@@ -1,0 +1,453 @@
+@import "https://mikzel.dk/MoltrupAdmin/SRC/STYLES/planlægslides.css";
+@import "https://mikzel.dk/MoltrupAdmin/SRC/STYLES/tema.css";
+
+
+
+
+
+
+.con {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+p,h1,h2,h3{color: var(--maintekst);}
+
+
+
+.instillinger {
+  background-color: var(--main);
+  width: 80vw;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 25px;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+  background-image: url(../src/IMG/logo.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size:contain;
+  
+}
+
+@media screen and (max-width: 543px) {
+  .instillinger {
+    background-position: center;
+  }
+}
+
+
+/* 
+.instflex:before {
+  content:"";
+  box-sizing: border-box;
+  width: 15em;
+  height: 100%;
+  bottom: 0;
+  top:0;
+  right: 0;
+  left: 50%;
+  opacity: .5;
+  background-image: url(src/IMG/logo.png);
+  z-index: 0;
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateX(-50%);
+
+  
+} */
+
+
+.instflex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+
+}
+
+.instflex *{
+  z-index: 1;
+}
+
+
+
+.instilling {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+  padding: 5px;
+  
+}
+
+
+.insikon{
+  position: relative;
+  align-items: flex-end;
+  height: 100%;
+  margin-top:10px;;
+  cursor: pointer;
+  
+  
+}
+
+
+
+
+
+.nuværende {
+  position: relative;
+  display: flex;
+  background-color: var(--main);
+  width: 49%;
+  height: 100%;
+  border-radius: 25px;
+  box-sizing: border-box;
+}
+
+.rediger {
+  position: relative;
+  text-align: center;
+  background-color: var(--main);
+  border-radius: 25px;
+  box-sizing: border-box;
+  width: 49%;
+  height: 100%;
+}
+
+
+#dragknap{
+  font-size:2em;
+}
+
+.far,.fa-clock{
+
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 20px;
+  font-size: 1.5em;
+
+
+}
+
+iframe{
+  border: none;
+}
+
+.fa-trash-alt{
+  font-size:2em;
+}
+
+
+.ny {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-radius: 0 0 25px 25px;
+  background-color: var(--second);
+  cursor: pointer;
+  box-sizing: border-box;
+
+}
+
+.filupload {
+  display: none;
+}
+
+.nyegamle {
+  display: flex;
+  margin: auto;
+  width: 80vw;
+  flex-wrap: wrap;
+  position: relative;
+  height: 600px;
+  justify-content: space-between;
+}
+
+.nuværendebilcon {
+  width: 80%;
+  height: calc(90% - 60px);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: 10px auto;
+  background-color: var(--second);
+  border-radius: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: scroll;
+}
+
+.redigerslidescon {
+  position: absolute;
+  width: 80%;
+  height: calc(90% - 60px);
+  margin: 10px auto;
+  bottom:0;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--second);
+  border-radius: 25px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.gem {
+  width: 50%;
+  margin: auto;
+  border-radius: 25px;
+  opacity: 0;
+  -webkit-transform: translateY(50%) scale(0);
+  -moz-transform: translateY(50%) scale(0);
+  -ms-transform: translateY(50%) scale(0);
+  -o-transform: translateY(50%) scale(0);
+  transform: translateY(50%) scale(0);
+  height: 40px;
+  font-size: 20px;
+  background-color: var(--second);
+  cursor: pointer;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 40px;
+  box-shadow: 0px 2px 4px .2px black;
+  transition: .5s;
+}
+
+.gem:hover {
+  box-shadow: 0px 3px 8px 2px black;
+}
+
+/*.seændr{ background-color: #6a040f; width: 80vw; height: 100vw; padding: 20px; margin: 20px auto; border-radius: 25px; box-sizing: border-box; text-align: center; cursor: pointer;}*/
+.nuvbillede {
+  height: 40%;
+  flex-grow: 1;
+  margin: 2px;
+}
+
+.nuvbillede>img {
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+.redigersettings .switch {
+  margin: 0 auto;
+  -webkit-transform: translateX(30px);
+  -moz-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  -o-transform: translateX(30px);
+  transform: translateX(30px);
+}
+
+.redigersettings i {
+  margin-left: 50px;
+  position: absolute;
+}
+
+.redigersettings i:last-child {
+  margin: 0;
+  right: 0;
+}
+
+.redigersettings i:first-child {
+  margin: 0;
+  left: 0;
+}
+
+.redigersettings {
+  position: absolute;
+  right: 0;
+  -webkit-transform: translateX(-30px);
+  -moz-transform: translateX(-30px);
+  -ms-transform: translateX(-30px);
+  -o-transform: translateX(-30px);
+  transform: translateX(-30px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  width: 300px;
+}
+
+.redigeritem {
+  background-color: var(--second);
+  border-bottom: solid black 2px;
+  width: 100%;
+  height: 20%;
+  padding: 10px;
+  position: relative;
+}
+
+.redigeritem:last-child {
+  border-bottom: none;
+}
+
+.redigeritemswitch {
+  position: absolute;
+  bottom: 0;
+}
+
+.redigerbilcon {
+  height: 100%;
+  float: left;
+  width: 150px;
+}
+
+.redigerbilcon>img {
+  height: 100%;
+  width: 100%;
+  object-fit:cover;
+  
+}
+
+
+
+div>h3 {
+  margin: 0 auto;
+  font-size: 30px;
+  box-sizing: border-box;
+}
+
+
+
+
+
+@media screen and (max-width: 390px) {
+
+  .popup>h1{
+
+   font-size: 30px !important;
+    
+  }
+}
+
+
+
+
+@media screen and (max-width: 1024px) {
+  .nyegamle {
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .nyegamle>div {
+    height: 600px;
+    margin-bottom: 10px;
+    width: 100%;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 1273px) and (min-width: 1024px) {
+  .redigersettings {
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: translateX(-30px);
+    width: 230px;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 1388px) and (min-width: 1024px) {
+  .redigerbilcon {
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1259px) {}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

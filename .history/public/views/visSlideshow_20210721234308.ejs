@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" charset="utf-8"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../visSlideshow.css">
+    <script>
+         let slideshowIdRaw = '<%-JSON.stringify(slideshowId) %>';
+      let slideshowId = JSON.parse(slideshowIdRaw);
+         let slideInsRaw = '<%-JSON.stringify(slideIns) %>';
+      let slideIns = JSON.parse(slideInsRaw);
+
+    </script>
+    <title><%-slideshowNavn%> Slideshow</title>
+
+</head>
+<body>
+   
+    <div class="slider">
+<%%>
+    </div>
+
+    <script src="../SRC/slighter.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script> 
+    <script src="../visSlideshow.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="da" dir="ltr">
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/6dfa6f1a44.js" crossorigin="anonymous"></script>
+<link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="../../MasterSlide.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Slide-tilpasser</title>
+
+
+    <script type="application/javascript">
+
+
+    
+      let slides = '<%-JSON.stringify(slideshow) %>';
+      let slideshow = '<%- slideshow %>';
+
+      </script>
+
+  </head>
+  <body onLoad="">
+    <div class="loading">
+      <div class="loadbesked">Har du forbindelse til internettet?</div>
+<div class="lds-ring"><div></div><div></div><div></div><div></div></div>  </div>
+
+
+
+
+
+<h1 style="text-align: center; margin: 10px; font-size: 40px;">Slide-tilpasser</h1>
+<div class="instillinger">
+  <h3>Indstillinger</h3> <br>
+  <div class="instflex">
+  <div class="instilling"> <p>Varighed</p> <input type="number" id="varighed" oninput="inputdata(this)" placeholder="I sek"> </div>
+  <div class="instilling"> <p>Overgang</p> <label class="switch" > <input id="toggleovergang" onchange="toggledata(this)" type="checkbox" > <span class="slider"></span></label> </div>
+    <div class="instilling"> <p id="aktivtekst">Loader...</p> <label class="switch" > <input id="toggleaktiv" type="checkbox" onchange="toggledata(this)" > <span class="slider"></span></label> </div>
+    
+  </div>
+
+
+  <div class="instflex">
+    <div class="instilling insikon"> <i class="fas fa-desktop" style="font-size:2em;" onclick="popup('titel','Infoskærm live','ramme', true,'<p>Content</p>')"></i> </div>
+  </div>
+
+
+</div>
+
+<!-- <div class="popupcon">
+<div class="popup">
+<p class="x" onclick="luk()">x</p>
+<div class="popbilledecon"></div> -->
+
+
+<!--<div class="downloadbillede" onclick="downloadbillede(this)"> <p>Download Billede</p>  </div>-->
+
+</div>
+</div>
+
+
+
+
+
+<div class="nyegamle">
+
+<div class="nuværende">
+<h3>Nuværende billeder</h3>
+<div class="nuværendebilcon"></div>
+</div>
+<!--<img src="Willy Broown skitse.jpg" alt="">-->
+
+<div class="rediger">
+  <i onclick="planlægops()" class="far fa-clock"></i>
+<h3>Redigér slides</h3>
+<div class="redigerslidescon"></div>
+
+<div class="gem" >Gem rækkefølge</div>
+<div class="ny" onclick="filupload.click();"> <h3>Tilføj slide</h3>   <input class="filupload" type="file" accept='image/*'> </div>
+</div>
+</div>
+
+<!--<div class="seændr"> <h3>Se ændringerne</h3></div>-s-->
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.10.2/Sortable.min.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script> <!--<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>-->  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-functions.js"></script> <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script> <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script> 
+    </script> <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>   <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"></script><script src="https://mikzel.dk/MoltrupAdmin/SRC/SCRIPTS/popup.js"></script>
+    <script src="https://mikzel.dk/MoltrupAdmin/SRC/SCRIPTS/sletfradbviaid.js"></script>
+    <script src="../../MasterSlide.js"></script>
+   
+    </body>
+</html>

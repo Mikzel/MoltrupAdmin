@@ -1,0 +1,18 @@
+@import "https://mikzel.dk/MoltrupAdmin/SRC/STYLES/tema.css";
+@import "widgets.css";
+*{box-sizing: border-box;}
+
+body{ transform: scale(.99);}
+main{width: 100vw; height: 100vh; background-color: var(--second); margin: auto;  border-radius: 10px;  display: grid; top:0;}
+.plus{text-align:center  !important; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 2em !important; }
+.widget-con{position: relative; cursor: pointer;}
+main > div{ background-color: var(--main); border-radius: 10px; }
+div{overflow: hidden}
+
+
+
+@media screen and ( max-width: 300px) and ( max-height: 150px){
+    main {
+       display: none !important;
+    }
+}

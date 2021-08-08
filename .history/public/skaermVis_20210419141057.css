@@ -1,0 +1,6 @@
+@import "https://mikzel.dk/MoltrupAdmin/SRC/STYLES/tema.css";
+
+
+
+main{display: grid; width:100vw; height: 100vh;}
+.plus{text-align:center  !important; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 2em !important; }

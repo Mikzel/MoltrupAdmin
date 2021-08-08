@@ -1,0 +1,32 @@
+@import "https://mikzel.dk/MoltrupAdmin/SRC/STYLES/tema.css";
+@import "widgets.css";
+body{background-color: #0b0b05;
+    background-image: url("https://www.transparenttextures.com/patterns/bo-play.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */}
+*{box-sizing: border-box; cursor: hidden  !important; color:var(--maintekst)}
+footer{width: 90%; background-color: var(--main);  margin: auto; border-radius: 10px; margin-top: 20px; padding: 5px;}
+.skærmHeader{display: inline-block; width: 90%; background-color: var(--main);  border-radius: 10px;margin: 0 auto; height:100%}
+header{display: flex; position: relative;width: 100%; margin-top: 20px;}
+header h1{text-align: center; font-size:3em;}
+main{width: 90%; height: 80vh; background-color: var(--second); margin: auto;  border-radius: 10px; margin-top: 20px; display: grid; top:0}
+main > div, .widget-con{ background-color: var(--main); border-radius: 10px; overflow: hidden;}
+.plus{text-align:center  !important; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 2em !important; }
+.widget-con{position: relative; cursor: pointer;}
+#widgets{display: flex; overflow-y: scroll; flex-wrap: wrap; justify-content: space-around;}
+#widgets>div{width: 200px; height: 200px; background-color: var(--second) !important; border-radius: 10px; position: relative; margin: 10px; cursor: pointer;}
+.popup{overflow-Y: scroll !important; display: block !important; margin: 20px auto !important}
+.x{ position: fixed !important;}
+.widget-ikon{font-size: 4em; width: 100%; text-align: center !important;}
+.WidgetConKord{font-size:.8rem; position: absolute; left:0; bottom:0; margin: 5px 10px; opacity: .5;}
+.widget-tekst{font-size: 1.3em; text-align: center; margin:10px;}
+.widget-tekst::first-letter{text-transform: capitalize;}
+.widgetIkonCon{position: absolute; left:50%; top:50%; transform: translate(-50%,-50%); pointer-events: none;}
+#disc{text-align: center; opacity: .5; margin:20px;}
+h1::first-letter{text-transform: capitalize;}
+.hjem{background-color: var(--main); padding: 10px; border-radius: 40%; display: inline-block; height:100%;  position: absolute; height:3em; margin-left: 5px;}
+.widgetSletIkon{z-index: 100; position: absolute; bottom: 0; left: 0; margin: 10px; font-size:2rem; cursor: pointer;}
+.widgetNavn{z-index: 100; position: absolute; top: 0; right: 0; margin: 10px; font-size:.8rem;}
+
+.widget{position: relative;}
+
+#standardLUK{position: absolute; width: 100%; height:2em; bottom:0; background-color: var(--second); }

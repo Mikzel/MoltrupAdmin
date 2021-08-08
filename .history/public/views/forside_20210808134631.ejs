@@ -1,0 +1,94 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/6dfa6f1a44.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <link href="../forside.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoltrupAdmin</title>
+
+    <script type="application/javascript">
+
+
+    
+        let vistPåstr = '<%-JSON.stringify(vistPå) %>';
+        let vistPå = JSON.parse(vistPåstr);
+      
+        </script>
+  
+</head>
+<body>
+
+
+    <header>
+        <div class="center-header"> <h3 class="disploc"></h3> </div>
+       
+        <div class="bruger">
+            <i class="fas fa-lock"></i>
+            <p class="authnavn"></p>
+            <a href="#" id="authlogud">Log ud</a>
+         </div>
+    </header>
+    <div class="menu">
+        <a href="#">Overblik</a>
+        <a href="#slideshows">Slideshows</a>
+        <a href="#log">Log</a>
+    </div>
+
+    <main class="overblik">
+        <div class="nyKnap" onclick="nySkærm()" title="Ny skærm"></div><br>
+        <% skærme.forEach(function(skærm){ %>
+            
+            <div class="skærm" id= <%= skærm %> >
+                <a href="<%=link+skærm%>">
+                <h3 style="display: block"><%= skærm %></h3>
+                <iframe width="300" height="150" src="/skærme/<%=skærm%>" frameborder="0"></iframe>  
+            </a>
+            <div class="skærmFooter"> 
+                <a target="_blank" href="/skærme/<%=skærm%>">Klik her</a> <p>for at se hele skærmen.</p> 
+            </div>
+           
+                  </div>
+          <% }); %>
+
+     
+     
+    </main>
+
+
+    <div class="alleMenu slideshowMenu">
+        <div class="nyKnap" onclick="nytSlideshow()" title="Nyt slideshow"></div><br>
+        <% slideshows.forEach(function(slideshow){ %>
+            
+            <div class="slideshow" id= <%= slideshow %> >
+                <a href="/rediger/slideshows/<%=slideshow%>" target="_blank" title="Rediger slideshow">
+                <h3 style="display: block"><%= slideshow %></h3>
+                <iframe width="300" height="150" src="/slideshows/<%=slideshow%>" frameborder="0"></iframe> 
+            </a>
+            <p class="slideshowOptræderPå" data-optræderPåParent='<%=slideshow%>'  <%if (vistPå[slideshow].length==0){style='opacity:0;'}>}%> >  
+                Optræder på: <br>         
+                <%=vistPå[slideshow].toString()%>
+               
+               
+            
+            </p> 
+ 
+           
+                  </div>
+          <% }); %>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-functions.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
+   
+    <script src="../header.js"></script>
+    <script src="../widgetinst.js"></script>
+
+</body>
+</html>

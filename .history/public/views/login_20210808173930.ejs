@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Log Ind</title>
+
+    <link rel="stylesheet" href="../login.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"defer></script> 
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-functions.js"defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.0/dist/js.cookie.min.js"defer></script>
+    <script src="../loginCheck.js" defer ></script>
+    <script src="../login.js" defer></script>
+  </head>
+  <body>
+
+<div class="logincenter">
+<div class="loginboks">
+  <div class="inputslog">
+    <p class="resetinstruks">Skriv din email, så får du tilsendt et link til reset af din kode</p>
+    <input onfocus="this.removeAttribute('readonly')"; type="text" class="Navn" autocomplete="off" readonly style="opacity: 0; display: none;" placeholder="Navn">
+    <input onfocus="this.removeAttribute('readonly')"; type="text" class="Email" autocomplete="off" readonly style="margin: 5px;" placeholder="Email">
+  <input onfocus="this.removeAttribute('readonly')"; type="password" autocomplete="off" readonly style="margin: 5px;" class="Kodeord toien loginfelt" name="" value="" placeholder="Kodeord">
+  <input onfocus="this.removeAttribute('readonly')"; type="password" autocomplete="off" readonly class="MasterKodeord" style="opacity: 0;  display: none;" placeholder="Master kode (Kirsten Ørskov)">
+
+  </div>
+
+<div class="ext">
+
+  <div class="logindknap knap">Log ind</div>
+  <div class="sendmailknap knap">Send mail</div>
+  <div class="opretbruger knap">Opret bruger</div>
+
+
+<div class="link"> <a class="bruger">Lav bruger</a> <a Class="logind" style="display: none; opacity: 0;">Log ind</a> <a Class="glemt">Glemt kode</a> </div>
+
+
+</div>
+</div>
+</div>
+
+
+
+<script src="../SRC/vanilla-tilt.js" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.10.2/Sortable.min.js"></script>
+      
+  </body>
+</html>

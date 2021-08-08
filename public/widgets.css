@@ -1,0 +1,43 @@
+
+*{box-sizing: border-box; margin:0; padding:0;}
+*::selection{display: none;}
+div{display: inline-block;}
+
+
+.nedtælling{text-align: center; font-family: auto; display: flex; justify-content: center;
+align-items: center; flex-direction: column}
+
+.nyheder{text-align: center;}
+.nyheder ul{ margin: 2px;}
+.nyheder-ul-border{border: 1px solid currentColor;}
+.nyheder-li-border{border-bottom: 1px solid currentColor;}
+.nyheder li{padding: 5px;list-style-type: none;}
+.nyheder li:last-child{border-bottom: none;}
+.nyhed-overskrift{font-weight: bold; color: currentColor}
+.nyhed-beskrivelse{font-size: 12px; color: currentColor}
+.nyhed-kategori{font-size: 1.5em; margin: 5px; font-weight: bold;}
+.nyhed-kategori::first-letter{text-transform: uppercase;}
+
+.aktiviteter{width: 25%}
+.aktiviteter>li{ padding: 10px;  margin: 7px; position: relative; }
+.aktiviteter>li>p{display: inline-block;}
+.aktiviteter>li>.aktiviteter_sted{display: block;}
+.aktiviteter_dato{position: absolute; right:0; padding:10px; font-size:1.5em; background-color: black; border-radius: 50%; color: white;}
+
+
+.vejr{ display: flex; justify-content:center; align-items:center; }
+.vejr>a{pointer-events: none  !important;}
+
+
+.dagens-vagter div>:first-child{font-weight: bold; font-size: 1em;}
+/*.vagter div>:last-child{font-size: .9em;} */
+.dagens-vagter div{display:block; }
+
+.info{font-size: .5 rem;opacity: .5;}
+
+.weatherwidget-io-frame{position:relative !important; height: 100% !important; width: 100% !important;}
+
+iframe{
+    border: none;
+  }
+  

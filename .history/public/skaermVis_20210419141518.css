@@ -1,0 +1,7 @@
+@import "https://mikzel.dk/MoltrupAdmin/SRC/STYLES/tema.css";
+
+*{box-sizing: border-box;}
+
+main{width: 100vh; height: 100vh; background-color: var(--second); margin: auto;  border-radius: 10px; margin-top: 20px; display: grid; top:0}
+.plus{text-align:center  !important; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 2em !important; }
+.widget-con{position: relative; cursor: pointer;}

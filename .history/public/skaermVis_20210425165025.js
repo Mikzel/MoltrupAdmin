@@ -1,0 +1,5 @@
+gennemgåSkab();
+
+
+
+console.log(widgetData);

@@ -1,0 +1,5 @@
+@import "https://mikzel.dk/MoltrupAdmin/SRC/STYLES/tema.css";
+*{box-sizing: border-box;}
+footer, header{width: 90%; height: auto; background-color: var(--main);  margin: auto; border-radius: 10px; margin-top: 20px; padding: 5px;}
+main{width: 90%; height: 80vh; background-color: var(--second); margin: auto; border-radius: 10px; margin-top: 20px; display: grid; grid-template-columns: repeat(3, 3fr); grid-template-rows: repeat(3, 3fr);   grid-gap: 5px;}
+main > div{ background-color: var(--main); border-radius: 10px;}

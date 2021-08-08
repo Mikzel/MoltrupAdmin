@@ -1,0 +1,247 @@
+
+.widgetIns{
+ overflow-x: hidden;  
+ box-shadow: black 0 0 20px 0px; 
+ padding: 5px;
+ overflow: hidden  !important;
+ border-radius: 10px; 
+}
+
+#slideLinje{
+    position: absolute;
+    height:100%;
+    width: 5px;
+    background-color: black;
+    bottom: 0;
+    top:0;
+    cursor:col-resize;
+    margin: 5px;
+    z-index: 10;
+    left: 50%
+}
+
+#instGrid{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 100%;
+    grid-template-areas: "venstre højre";
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.ubrugtCheck{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+#miniSkab{
+    width:90%;
+    max-width: 400px;
+    min-height: 150px;
+    height:27%;
+    display: grid;
+    margin: 5px auto;
+    background-color: var(--bg);
+    border: black solid 2px;
+    border-radius:7px;
+}
+
+.miniSkabParent{
+    display: block;
+   width:100%; 
+}
+
+.miniSkabCon{
+    position: relative;
+}
+
+
+.brugt{background-color:var(--second);}
+
+.ubrugt{background-color:var(--main);}
+
+
+
+.brugt::after{
+    content: "BRUGT";
+    font-size: .8rem;
+    opacity: .5;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#instCon{
+    grid-area: højre;
+    overflow-Y: scroll  !important;
+    position: relative; 
+    padding-bottom: 50px;
+}
+
+#instCon>div{
+    margin: 3rem 0; 
+}
+
+
+#previewCon{
+    grid-area: venstre;
+    position: relative;
+    overflow-Y: scroll  !important;
+}
+
+
+#instCon input, button{
+    
+    width: auto  ;
+    height: auto  ;
+    margin: 5px;
+    padding:5px;
+    font-size: 1em;
+    
+}
+
+#instCon input[type="color"]{
+    padding: 0 2em;
+    height: 2rem;
+}
+
+#instCon h3{
+    display: block
+}
+
+#visDTMS{
+    display: block
+}
+
+input[name='efterOPT'], #visDTMS>input[type='checkbox']{
+    margin-right: 5px;
+}
+
+
+#efterTekstBoks{
+    color: black !important;
+    width:90%;
+    height: 2em;
+    margin: 10px;
+    font-size: 1.2em;
+    display: none;
+}
+
+.info{
+    font-size: 1 rem;
+    opacity: .5;
+}
+
+.ui-tooltip-content{
+    color: black !important;
+}
+.ui-tooltip{
+    margin:0 !important;
+}
+
+.samling{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.samling input{
+  width: 80% !important;
+}
+
+#efter{
+    margin: 5px;
+}
+
+.footer{
+    position: fixed;
+    display: inline-flex;
+    padding: 5px;
+    bottom:0;
+    right: 0;
+    width: 100% !important; 
+    justify-content: center;
+    z-index: 200;
+    
+}
+
+.footer input{
+    font-size: 1.5em  !important; 
+    padding: 5px !important;
+    cursor: pointer;
+    
+}
+
+
+.center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.ui-checkboxradio-label{
+    background-color: var(--second);
+    margin: 5px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    text-align: center;
+    border: black solid 2px;
+    outline: none;
+    color: var(--tekst)
+}
+.ui-checkboxradio-label:focus{
+
+    outline: none;
+ 
+}
+
+.ui-checkboxradio-checked{
+    background-color: #0075FF;
+    
+}
+
+.ui-checkboxradio-label:hover{
+    background-color: var(--second);
+    color: var(--tekst);
+    border: black solid 2px;
+}
+
+
+#nyhedskategorier,#nyhedVisningInst{display:flex; flex-direction: column; justify-content:center; align-items:center}
+#nyhedskategorier *, #nyhedVisningIns *{width: 80%;}
+
+
+#plandayPosList{
+    display:flex;
+    flex-direction:column;
+    height: 40%;
+    overflow-y: scroll;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#plandayPosList li{
+    display:flex;
+    flex-direction:row-reverse;
+
+}
+
+#plandayPosList li input[type="checkbox"]{
+    display:inline;
+    justify-content: left;
+
+
+}

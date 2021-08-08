@@ -1,0 +1,109 @@
+
+@import "https://mikzel.dk/MoltrupAdmin/SRC/STYLES/tema.css";
+  /*LOGIN CENTER*/
+.logincenter{
+  position: absolute;
+top: 50%;
+left: 50%;
+    display: inline-block;
+    opacity: 0;
+transform: translate(-50%, -70%);
+transition: .5s;
+}
+
+.loadanim{
+transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+
+
+
+
+
+  /*LOGIN BOKS*/
+  .loginboks{
+    position: relative;
+    box-sizing: border-box;
+    width: 500px;
+    height: 250px;
+  background-color: #6a040f;
+
+  border-radius: 20px;
+
+
+
+  }
+
+  .loginboks *{color: white;}
+
+  .inputslog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+  }
+
+  .inputslog input{
+    width: 90%;
+  }
+
+  .ext{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    margin: 5px;
+
+
+  }
+
+  .ext a{
+    color: #500104;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+.resetinstruks{
+  color: black;
+  display: none;
+  opacity: 0;
+}
+
+.sendmailknap{
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  width: auto !important;
+  height: 1.5em !important;
+  line-height: 1.5em;
+  padding: 5px !important;
+
+}
+
+
+.logindknap{
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+
+  
+
+}
+
+.opretbruger{
+  display: none;
+    opacity: 0;
+  margin-bottom: 10px;
+  width: 150px;
+}

@@ -1,0 +1,36 @@
+<div class="samling">
+    <input id="tekst" class="inst" data-skal="true"  placeholder="Skriv en overskrift til nedtællingen.">
+    <input id="farve" class="inst" type="color" value="#ffffff" title="Vælg farven som tekten (nedtællingen og overskriften) skal have. standard er hvid.">
+    <input id="størrelse" data-frivillig=true value="" type="number" class="inst"  title="Lad feltet stå tomt, for auto."  placeholder="skrift-størrelse i pixels. Lad feltet stå tomt, for auto">
+    <input id="dato" class="inst" type="date"  title="Vælg datoen, nedtællingen skal tælle ned til." data-skal="true" placeholder="Vælg dato">
+    <input id="tid" class="inst"  data-skal="true" title="Vælg klokkeslettet, af overstående dato, som nedtællingen skal tælle ned til. Klik på uret til højre, for valgmuligheder. "  type="time">
+    </div>
+
+
+        <div id="visDTMS">
+        <h3>Vælg hvilke værdier, der skal vises</h3>
+        <label>Dage</label>
+        <input id="dage" data-frivillig=true class="inst"  type="checkbox"  checked="true"> 
+
+        <label>Timer</label>
+        <input id="timer" data-frivillig=true class="inst"  type="checkbox" checked="true">
+   
+        <label>Minutter</label>
+        <input id="minutter" data-frivillig=true class="inst"  type="checkbox" checked="true">
+
+        <label>Sekunder</label>
+        <input id="sekunder" data-frivillig=true class="inst"  type="checkbox" checked="true">
+        </div>
+        
+
+            <div id="efter">
+            <h3>Efter nedtællingen er udløbet</h3>
+            <label for="sluk" >Skjul nedtællingen</label>
+            <input id="sluk" type="radio" name="efterOPT" checked="true">
+            <label for="frys">Frys nedtællingen</label>
+            <input id="frys" type="radio" name="efterOPT">
+            <label for="efterTekst">Vis en besked</label>
+            <input id="efterTekst" type="radio" name="efterOPT">
+            </div>
+
+            <textarea id="efterTekstBoks"  placeholder="Skriv beskeden her."></textarea>

@@ -1,0 +1,5 @@
+@import "https://mikzel.dk/MoltrupAdmin/SRC/STYLES/tema.css";
+
+
+
+#standardLUK{position: absolute; width: 100%; height:2em; bottom:0; background-color: var(--second); }
